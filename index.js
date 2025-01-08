@@ -11,9 +11,9 @@ const { Client, LocalAuth } = whatsappWeb;
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
-        executablePath: '/usr/bin/chromium-browser', // Path to system-installed Chromium
-        headless: true, // Run in headless mode
-        args: ['--no-sandbox', '--disable-setuid-sandbox'], // Flags to avoid sandboxing issues
+        executablePath: '/usr/bin/chromium' || '/usr/local/bin/chromium', // Try both paths
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
     },
 });
 

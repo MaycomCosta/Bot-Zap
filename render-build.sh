@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Update package list and install Chromium and other necessary dependencies
+# Install system dependencies for Puppeteer
 apt-get update && apt-get install -y \
-  chromium-browser \
+  chromium \
   libatk1.0-0 \
   libx11-xcb1 \
   libxcomposite1 \
