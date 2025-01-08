@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: botzap
+    env: node
+    plan: free
+    buildCommand: ./render-build.sh && npm install
+    startCommand: node index.js
+    disk:
+      name: botzap-data
+      mountPath: /root/.wwebjs_auth/

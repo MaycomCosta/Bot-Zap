@@ -7,12 +7,13 @@ import puppeteer from 'puppeteer';
 const { Client, LocalAuth } = whatsappWeb;
 
 // Initialize WhatsApp client
+
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
-        executablePath: puppeteer.executablePath(), // Use Puppeteer's bundled Chromium
-        headless: true, // Run browser in headless mode (no UI)
-        args: ['--no-sandbox', '--disable-setuid-sandbox'], // Optional flags for compatibility
+        executablePath: '/usr/bin/chromium-browser', // Path to system-installed Chromium
+        headless: true, // Run in headless mode
+        args: ['--no-sandbox', '--disable-setuid-sandbox'], // Flags to avoid sandboxing issues
     },
 });
 
