@@ -36,4 +36,4 @@ ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome
 EXPOSE 3000
 
 # Run your application
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
