@@ -4,17 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2",
-    "puppeteer": "^23.11.1",
-    "qrcode": "^1.5.4",
+    "express": "^4.18.2",
     "qrcode-terminal": "^0.12.0",
-    "whatsapp-web.js": "^1.26.0"
+    "qrcode": "^1.5.1",
+    "whatsapp-web.js": "^1.18.5",
+    "puppeteer": "^21.0.0"
   }
 }
