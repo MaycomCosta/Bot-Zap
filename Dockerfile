@@ -21,10 +21,10 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Copy package.json and package-lock.json
-COPY package*.json ./
+COPY package.json package-lock.json ./
 
 # Install project dependencies
-RUN npm install
+RUN npm install --production
 
 # Copy all project files
 COPY . .
