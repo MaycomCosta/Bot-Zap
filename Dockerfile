@@ -23,14 +23,15 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package.json package-lock.json ./
 
-# Install project dependencies
-RUN npm install --production && npm list --depth=0
+# Install project dependencies (use npm ci for consistency)
+RUN npm ci --production && npm list --depth=0
 
 # Copy all project files
 COPY . .
 
 # Set environment variable for Puppeteer
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome
+ENV NODE_OPTIONS="--experimental-modules"
 
 # Expose the port your app will run on
 EXPOSE 3000
