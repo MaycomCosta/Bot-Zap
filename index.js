@@ -4,7 +4,7 @@ import express from 'express';
 import qrcode from 'qrcode-terminal';
 import qrcodeImage from 'qrcode'; // For generating QR code as an image
 import whatsappWeb from 'whatsapp-web.js';
-import puppeteer from 'puppeteer';
+
 const { Client, LocalAuth } = whatsappWeb;
 // Initialize WhatsApp client
 const client = new Client({
