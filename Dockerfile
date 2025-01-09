@@ -24,7 +24,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Install project dependencies
-RUN npm install --production
+RUN npm install --production && npm list --depth=0
 
 # Copy all project files
 COPY . .
